@@ -4,14 +4,15 @@ from termcolor import cprint
 class CLIHandler():
     
     def __init__(self) -> None:
+        # Frist print the logo
         self.print_logo()   
 
     def print_logo(self):
+        """Function that prints the application's logo over the Command Line Interface.
+        """
         print()
         logo = figlet_format('PDC', font='isometric3')
         cprint(logo, 'light_magenta')
-    
-    # hello?
     
 class colors():
     """Class that contains the ansi strings representing different colors

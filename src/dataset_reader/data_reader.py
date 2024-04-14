@@ -118,8 +118,14 @@ if __name__ == '__main__':
     # row_printer(move_df, name='Surf') 
     
     dr = DatasetReader(pokemon_fp)
-    print(dr.search_by_name('Bulbasaur'))
+    pkmn = dr.search_by_name('Squirtle')
+    print(pkmn)
+    print(isinstance(pkmn.get('type_2').values[0], float))
     
     dr_m = DatasetReader(move_fp)
+    print(dr_m.search_by_name('Scald'))
     
+    move = dr_m.search_by_name('Scald')
+    print(move.get('accuracy').values[0])
+
      
